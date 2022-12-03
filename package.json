@@ -1,10 +1,12 @@
 {
   "name": "rover_mars",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+	"dev": "node index.js"
   },
   "repository": {
     "type": "git",
