@@ -17,11 +17,13 @@ fs.readFile(filePath, 'utf8', (err, data) => {
 
 function parser(data) {
 	const dataNormalized = normalize(data);
-	parserSize(dataNormalized[0]);
+	parseSize(dataNormalized[0]);
 	console.log("Fora da função " + map_obj.mapSizeX)
 	console.log("Fora da função " + map_obj.mapSizeY)
-	//parserPosition(data);
-	//parserMoves(data);
+	for (let i = 1; i < dataNormalized.length; i++) {
+		parsePosition(dataNormalized[i]);
+		//parserMoves(dataNormalized[i]);
+	}
 }
 
 function normalize(data) {
@@ -37,7 +39,7 @@ function normalize(data) {
 	return dataParsed;
 }
 
-function parserSize(size) {
+function parseSize(size) {
 	if (size) {
 		const sizeSplited = size.split(' ');
 
@@ -46,4 +48,12 @@ function parserSize(size) {
 			map_obj.mapSizeY	= Number(sizeSplited[1]);
 		}
 	}
+}
+
+function parsePosition(data) {
+	const dataSplited	= data.split(' ');
+	if (dataSplited.length > 0 && dataSplited.length <= 3) {
+		
+	}
+
 }
