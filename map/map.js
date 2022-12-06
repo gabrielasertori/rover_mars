@@ -1,6 +1,6 @@
 class Map {
 	constructor(id) {
-		this._id		= id,
+		this._id		= id.toString().length > 1 ? id : null,
 		this._mapSizeX	= 0,
 		this._mapSizeY	= 0
 	}

@@ -10,8 +10,8 @@ function parser(data) {
 
 	parseSize(dataNormalized[0], observer);
 	for (let i = 1; i < dataNormalized.length; i++) {
-		parsePosition(dataNormalized[i]);
-		parseMoves(dataNormalized[i]);
+		parsePosition(dataNormalized[i], observer);
+		parseMoves(dataNormalized[i], observer);
 	}
 }
 

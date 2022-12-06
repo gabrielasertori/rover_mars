@@ -1,4 +1,4 @@
-function parseMoves(data) {
+function parseMoves(data, observer) {
 	for (let ch of data) {
 		if (Number(ch)) {
 			console.log("Errado");

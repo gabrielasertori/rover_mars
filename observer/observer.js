@@ -14,6 +14,10 @@ class Observer {
 		return this._planet;
 	}
 
+	get numRovers() {
+		return this._numRovers;
+	}
+
 	set planet(planet) {
 		this._planet = planet;
 	}
@@ -28,10 +32,12 @@ class Observer {
 	/**
 	 * @param {Array} numRover
 	 */
-	set rovers(numRover) {
-		for (let rover of numRover) {
-			this._rovers[rover] = numRover;
-		}
+	set rovers(roverId) {
+		this._rovers.push(roverId);
+	}
+
+	get rovers() {
+		return this._rovers;
 	}
 }
 
