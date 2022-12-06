@@ -6,6 +6,18 @@ class Observer {
 		this._rovers	= []
 	}
 
+	get id() {
+		return this._id;
+	}
+
+	get planet() {
+		return this._planet;
+	}
+
+	set planet(planet) {
+		this._planet = planet;
+	}
+
 	/**
 	 * @param {number} num
 	 */

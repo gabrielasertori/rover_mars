@@ -5,11 +5,10 @@ const parseMoves	= require('./parseMoves.js');
 const Observer		= require('../observer/observer.js');
 
 function parser(data) {
-	const observer			= new Observer();
+	const observer			= new Observer(1);
 	const dataNormalized	= normalize(data);
-	console.log(observer.id);
 
-	parseSize(dataNormalized[0]);
+	parseSize(dataNormalized[0], observer);
 	for (let i = 1; i < dataNormalized.length; i++) {
 		parsePosition(dataNormalized[i]);
 		parseMoves(dataNormalized[i]);

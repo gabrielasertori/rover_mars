@@ -1,6 +1,9 @@
+const Map = require('../map/map.js');
+
 function parseSize(size, observer) {
 	if (size) {
-		const map			= new Map();
+		const map			= new Map(1);
+		observer.planet		= map.id;
 		const sizeSplited	= size.split(' ');
 
 		if (sizeSplited.length > 0 && sizeSplited.length <= 2) {

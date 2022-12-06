@@ -1,6 +1,6 @@
 class Map {
-	constructor() {
-		this._id		= 0,
+	constructor(id) {
+		this._id		= id,
 		this._mapSizeX	= 0,
 		this._mapSizeY	= 0
 	}
@@ -24,6 +24,10 @@ class Map {
 	 */
 	set id(id) {
 		this._id = id;
+	}
+
+	get id () {
+		return this._id;
 	}
 }
 
