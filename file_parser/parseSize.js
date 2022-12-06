@@ -1,12 +1,11 @@
-const { map_obj }	= require('../map/map_obj.js');
-
-function parseSize(size) {
+function parseSize(size, observer) {
 	if (size) {
-		const sizeSplited = size.split(' ');
+		const map			= new Map();
+		const sizeSplited	= size.split(' ');
 
 		if (sizeSplited.length > 0 && sizeSplited.length <= 2) {
-			map_obj.mapSizeX	= Number(sizeSplited[0]);
-			map_obj.mapSizeY	= Number(sizeSplited[1]);
+			map.mapSizeX	= Number(sizeSplited[0]);
+			map.mapSizeY	= Number(sizeSplited[1]);
 		}
 	}
 }
