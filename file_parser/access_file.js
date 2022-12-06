@@ -22,7 +22,7 @@ function parser(data) {
 	console.log("Fora da função " + map_obj.mapSizeY)
 	for (let i = 1; i < dataNormalized.length; i++) {
 		parsePosition(dataNormalized[i]);
-		//parserMoves(dataNormalized[i]);
+		parseMoves(dataNormalized[i]);
 	}
 }
 
@@ -51,9 +51,24 @@ function parseSize(size) {
 }
 
 function parsePosition(data) {
-	const dataSplited	= data.split(' ');
-	if (dataSplited.length > 0 && dataSplited.length <= 3) {
-		
+	const dataSplited = data.split(' ');
+
+	if (dataSplited.length == 3) {
+		if (Number(dataSplited[0]) && Number(dataSplited[1])) {
+			console.log("é posição");
+		}
+	}
+
+}
+
+function parseMoves(data) {
+	for (let ch of data) {
+		if (Number(ch)) {
+			console.log("Errado");
+			break ;
+		} else {
+			console.log("é movimento")
+		}
 	}
 
 }
